@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetroHub - Train & Metro Tickets</title>
+    <link rel="icon" sizes="32x32" href="MB8-icon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-train"></i>
+                <span>MetroHub</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#train-tickets">Train Tickets</a></li>
+                <li><a href="#metro-tickets">Metro Tickets</a></li>
+                <li><a href="#routes">Routes</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Book Your Journey with <span class="highlight">MetroHub</span></h1>
+            <p>Fast, reliable, and affordable train and metro ticket booking at your fingertips</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary btn-large">Book Train Ticket</button>
+                <button class="btn btn-secondary btn-large">Book Metro Ticket</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="train-animation">
+                <i class="fas fa-train"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Instant Booking</h3>
+                <p>Book your tickets in seconds with our fast and efficient system</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Payment</h3>
+                <p>Your transactions are protected with industry-leading security</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-ticket-alt"></i>
+                <h3>E-Tickets</h3>
+                <p>Get digital tickets delivered instantly to your device</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Our support team is always ready to help you</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Train Tickets Section -->
+    <section id="train-tickets" class="booking-section train-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-train"></i> Train Tickets</h2>
+                <p>Book intercity and long-distance train tickets</p>
+            </div>
+            <div class="booking-form">
+                <form id="trainForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="trainFrom">From</label>
+                            <select id="trainFrom" required>
+                                <option value="">Select Station</option>
+                                <option value="cairo">Cairo Central Station</option>
+                                <option value="alexandria">Alexandria Station</option>
+                                <option value="giza">Giza Station</option>
+                                <option value="luxor">Luxor Station</option>
+                                <option value="aswan">Aswan Station</option>
+                                <option value="port-said">Port Said Station</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="trainTo">To</label>
+                            <select id="trainTo" required>
+                                <option value="">Select Station</option>
+                                <option value="cairo">Cairo Central Station</option>
+                                <option value="alexandria">Alexandria Station</option>
+                                <option value="giza">Giza Station</option>
+                                <option value="luxor">Luxor Station</option>
+                                <option value="aswan">Aswan Station</option>
+                                <option value="port-said">Port Said Station</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="trainDate">Departure Date</label>
+                            <input type="date" id="trainDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="trainTime">Departure Time</label>
+                            <select id="trainTime" required>
+                                <option value="">Select Time</option>
+                                <option value="06:00">06:00 AM</option>
+                                <option value="08:00">08:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="14:00">02:00 PM</option>
+                                <option value="16:00">04:00 PM</option>
+                                <option value="18:00">06:00 PM</option>
+                                <option value="20:00">08:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="trainClass">Class</label>
+                            <select id="trainClass" required>
+                                <option value="">Select Class</option>
+                                <option value="first">First Class</option>
+                                <option value="second">Second Class</option>
+                                <option value="third">Third Class</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="trainPassengers">Passengers</label>
+                            <select id="trainPassengers" required>
+                                <option value="1">1 Passenger</option>
+                                <option value="2">2 Passengers</option>
+                                <option value="3">3 Passengers</option>
+                                <option value="4">4 Passengers</option>
+                                <option value="5">5 Passengers</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large btn-block">
+                        <i class="fas fa-search"></i> Search Trains
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metro Tickets Section -->
+    <section id="metro-tickets" class="booking-section metro-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-subway"></i> Metro Tickets</h2>
+                <p>Book metro tickets for daily commutes</p>
+            </div>
+            <div class="booking-form">
+                <form id="metroForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="metroLine">Metro Line</label>
+                            <select id="metroLine" required>
+                                <option value="">Select Line</option>
+                                <option value="line1">Line 1 (Helwan - El-Marg)</option>
+                                <option value="line2">Line 2 (Shubra - Giza)</option>
+                                <option value="line3">Line 3 (Adly Mansour - Cairo University)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ticketType">Ticket Type</label>
+                            <select id="ticketType" required>
+                                <option value="">Select Type</option>
+                                <option value="single">Single Journey</option>
+                                <option value="return">Return Journey</option>
+                                <option value="daily">Daily Pass</option>
+                                <option value="weekly">Weekly Pass</option>
+                                <option value="monthly">Monthly Pass</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="metroFrom">From Station</label>
+                            <select id="metroFrom" required>
+                                <option value="">Select Station</option>
+                                <option value="helwan">Helwan</option>
+                                <option value="sadat">Sadat</option>
+                                <option value="gamal-abdel-nasser">Gamal Abdel Nasser</option>
+                                <option value="shubra">Shubra</option>
+                                <option value="giza">Giza</option>
+                                <option value="cairo-university">Cairo University</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="metroTo">To Station</label>
+                            <select id="metroTo" required>
+                                <option value="">Select Station</option>
+                                <option value="helwan">Helwan</option>
+                                <option value="sadat">Sadat</option>
+                                <option value="gamal-abdel-nasser">Gamal Abdel Nasser</option>
+                                <option value="shubra">Shubra</option>
+                                <option value="giza">Giza</option>
+                                <option value="cairo-university">Cairo University</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="metroQuantity">Quantity</label>
+                            <select id="metroQuantity" required>
+                                <option value="1">1 Ticket</option>
+                                <option value="2">2 Tickets</option>
+                                <option value="3">3 Tickets</option>
+                                <option value="4">4 Tickets</option>
+                                <option value="5">5 Tickets</option>
+                                <option value="10">10 Tickets</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="metroDate">Travel Date</label>
+                            <input type="date" id="metroDate" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large btn-block">
+                        <i class="fas fa-ticket-alt"></i> Book Metro Ticket
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Routes Section -->
+    <section id="routes" class="routes-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-route"></i> Popular Routes</h2>
+                <p>Explore our most popular train and metro routes</p>
+            </div>
+            <div class="routes-grid">
+                <div class="route-card">
+                    <div class="route-header">
+                        <span class="route-type train">Train</span>
+                        <span class="route-price">$25</span>
+                    </div>
+                    <h3>Cairo → Alexandria</h3>
+                    <div class="route-details">
+                        <span><i class="fas fa-clock"></i> 2h 30m</span>
+                        <span><i class="fas fa-calendar"></i> Daily</span>
+                    </div>
+                    <button class="btn btn-outline">Book Now</button>
+                </div>
+                <div class="route-card">
+                    <div class="route-header">
+                        <span class="route-type train">Train</span>
+                        <span class="route-price">$45</span>
+                    </div>
+                    <h3>Cairo → Luxor</h3>
+                    <div class="route-details">
+                        <span><i class="fas fa-clock"></i> 10h</span>
+                        <span><i class="fas fa-calendar"></i> Daily</span>
+                    </div>
+                    <button class="btn btn-outline">Book Now</button>
+                </div>
+                <div class="route-card">
+                    <div class="route-header">
+                        <span class="route-type metro">Metro</span>
+                        <span class="route-price">$0.50</span>
+                    </div>
+                    <h3>Line 1: Helwan → El-Marg</h3>
+                    <div class="route-details">
+                        <span><i class="fas fa-clock"></i> 1h 15m</span>
+                        <span><i class="fas fa-calendar"></i> Daily</span>
+                    </div>
+                    <button class="btn btn-outline">Book Now</button>
+                </div>
+                <div class="route-card">
+                    <div class="route-header">
+                        <span class="route-type metro">Metro</span>
+                        <span class="route-price">$0.50</span>
+                    </div>
+                    <h3>Line 2: Shubra → Giza</h3>
+                    <div class="route-details">
+                        <span><i class="fas fa-clock"></i> 45m</span>
+                        <span><i class="fas fa-calendar"></i> Daily</span>
+                    </div>
+                    <button class="btn btn-outline">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stat-item">
+                <h3>10M+</h3>
+                <p>Tickets Booked</p>
+            </div>
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>Stations Covered</p>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Train Routes</p>
+            </div>
+            <div class="stat-item">
+                <h3>99%</h3>
+                <p>Customer Satisfaction</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+                <p>Have questions? We're here to help!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+20 123 456 7890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>support@metrohub.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Metro Street, Cairo, Egypt</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-train"></i>
+                        <span>MetroHub</span>
+                    </div>
+                    <p>Your trusted partner for train and metro ticket booking. Fast, reliable, and affordable.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#train-tickets">Train Tickets</a></li>
+                        <li><a href="#metro-tickets">Metro Tickets</a></li>
+                        <li><a href="#routes">Routes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Download App</h4>
+                    <p>Get the MetroHub app for easier booking</p>
+                    <div class="app-buttons">
+                        <button class="btn btn-dark"><i class="fab fa-apple"></i> App Store</button>
+                        <button class="btn btn-dark"><i class="fab fa-google-play"></i> Play Store</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MetroHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2><i class="fas fa-check-circle"></i> Booking Confirmed!</h2>
+            </div>
+            <div class="modal-body">
+                <div class="ticket-preview">
+                    <div class="ticket-header">
+                        <span class="ticket-type" id="modalTicketType">Train Ticket</span>
+                        <span class="ticket-id" id="modalTicketId">#TKT-000000</span>
+                    </div>
+                    <div class="ticket-details">
+                        <div class="detail-row">
+                            <span class="label">From:</span>
+                            <span class="value" id="modalFrom">-</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">To:</span>
+                            <span class="value" id="modalTo">-</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Date:</span>
+                            <span class="value" id="modalDate">-</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Time:</span>
+                            <span class="value" id="modalTime">-</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Passengers:</span>
+                            <span class="value" id="modalPassengers">-</span>
+                        </div>
+                        <div class="detail-row total">
+                            <span class="label">Total:</span>
+                            <span class="value" id="modalTotal">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" onclick="downloadTicket()">
+                        <i class="fas fa-download"></i> Download Ticket
+                    </button>
+                    <button class="btn btn-outline" onclick="closeModal()">
+                        <i class="fas fa-times"></i> Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
